@@ -1,0 +1,49 @@
+Members: Justin, Elise, Jessica, Anjelika, Emma
+
+CHARACTER:
+
+	I) Playable characters will start out with a dexterity, strength, and intelligence of 8, 
+	and we will randomize the remaining 8 points such that certain classes will have higher leveled attributes 
+	(Ex. Wizards have higher intelligence, warriors have higher strength, etc). 
+	Health will start at 50 and increase as a player levels up. 
+	
+	II) NPCs will be given random attributes based on their "level."
+
+ENCOUNTER:
+
+	I)Players will encounter NPCs who will be determined randomly. The player can flee, attack, or talk. 
+	  	- FLEE: If a player chooses to flee, his/her strength will slightly 
+	  decrease, and a new encounter will be generated. 
+	  
+	  	-ATTACK: Every character will have a basic attack method, as well as 
+	  some specific to its class. (Wizards cast spells, theives steal, 
+	  warrior uses a sword) 
+	  
+	  	-TALK: A player will input an integer that corresponds to a type
+	  of phrase. NPCs will generate a random response. The results of these 
+	  responses can vary. They can cause a fight, cause the enemy to leave,
+	  can intimidate the enemt, etc. When a player intimidates, his/her or the NPCs 
+	  strength will decrease. (The player takes a risk if he/she chooses to intimidate.)
+
+COMBAT: 
+
+	I) Hitting an opponent will be based on a player's dexterity. 3 6-sided dice will be rolled, 
+	and if a player's dexterity is less than or equal to the sum of the roll, the attack will hit the opponent. 
+	If the player has a weapon, damage will be based on the type of weapon, strength, 
+	and the distance between the two characters. 
+	If the player uses a weapon, his/her dexterity will be subtracted by 1 when the dice are rolled. 
+
+	
+EXPERIENCE/LEVELING UP:
+
+	Players will earn 1 point of experience for every point of damage done to a foe, 
+	and 5 points for successfully killing his/her opponent. 
+	Attributes can be increased with the amount of experience a player has 
+	(Ex. XP<100, skill point=20XP; XP<200, skill point=40XP, etc). 
+	Players will be able to choose what attribute to spend the skill point on. 
+
+HEALING:
+
+	To make things simple, a player will regenerate to his/her full health after he/she has 
+	successfully defeated the opponent. 
+

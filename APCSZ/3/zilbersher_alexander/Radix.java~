@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Radix {
+
+    private ArrayList[] buckets = new ArrayList[10];
+
+    private void makeBuckets() {
+	for (int i=0;i<10;i++) {
+	    buckets[i] = new ArrayList();
+	}
+    }
+    
+    public void fill(ArrayList a, int max, int min) {
+	Random r = new Random();
+	for (int i=0;i<10;i++) {
+	    a[i] = min + (r.nextInt(max-min+1));
+	}
+    }
+
+    public ArrayList mySort(ArrayList a) {
+	makeBuckets();
+	fill(a,9999,1000);
+	int n = 0;
+	while (n < 10) {
+	    for (int i = 0;i<a.size();i++) {
+		if (n>0){
+		    buckets.set((a.get(i)%(10*(n+1)))/(10*n),a.get(i));
+		} else {
+		    buckets.set((a.get(i)%(10*(n+1))),a.get(i));
+		}
+		n++;
+		
+		    
+    
+}
