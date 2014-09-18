@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+
+public class Turtle
+{
+    private String name;
+    private int age;
+    private int speed;
+
+    public Turtle{
+    }
+    public Turtle(String name) {
+	name = name;
+	age = 0;
+	speed = 5;
+    }
+}
+	
+    

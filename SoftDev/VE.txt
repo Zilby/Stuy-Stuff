@@ -1,0 +1,1 @@
+Activate: source VE/bin/activate

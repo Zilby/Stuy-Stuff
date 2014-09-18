@@ -1,0 +1,214 @@
+;You can COPY/PASTE INTO LAB STARTING HERE ###################
+
+;1. In scheme, define a short list of nouns, and a short list of verbs. Examples below:  (SPEND AT MOST 2 minutes on this)
+(define nouns '( kitty toast tea) )
+(define verbs '( runs plays steams) ) 
+
+;2. Lets find a way to choose a random element of a list
+;a. You should be able to write (getNth L n), that returns the n'th element from list L, where 0 is the starting element.
+;YOU SHOULD HAVE getNth before continuing 
+
+(define (getNth L n)
+  (if (= n 0) (car L) (getNth (cdr L) (- n 1))))
+
+(define (getOne L)
+  (getNth L (random (length L))))
+
+;Remember: (random x) returns an integer from 0 to x-1. 
+;b. How do you get the number of elements of a list?
+;b. The list is indexed from 0 to what value?  (If a list has 5 elements, it goes from 0 to what value?)
+;d.  Write a function (getOne L) that returns a random element from list L, assume L is not null. 
+;HINT: Think about the range of numbers you want to get from the list. You can say  (getNth  L (random ???) ) 
+;in order to pick a random element what is the range of values you want to give getNth? (if the list has 5 elements, what range should the getNth be?)
+;what do you need put in the random command to get that range of values? (if you want to generate 0-10 what do you give random?)
+;YOU SHOULD HAVE getOne before continuing 
+
+;3a. We want to be able to append two words together, so we don't just want the word we want the word inside a list. This can be accomplished with the list command.  Lets make two functions using getOne and the lists you have made:
+;getNoun is a function that takes no parameters, that gives you a single random noun as a list:  
+;(geNoun) -> (kitty)
+;(geNoun) -> (toast)
+;getVerb gives you a single random verb as a list:  
+;(getVerb) -> (runs)
+;(getVerb) -> (steams)
+;YOU SHOULD HAVE getNoun and getVerb before continuing 
+(define (getNoun) (list(getOne nouns)))
+(define (getVerb) (list(getOne verbs)))
+(getNoun)
+(getVerb)
+;3b. If you do that then it is trivial to make a simple sentence that chooses a verb and a noun and adds them to the same list. This is because 
+;to join (kitty) and (runs)  we can just append:    
+(append '(kitty) '(runs) ) 
+
+;Here is the simple sentence generating function:
+
+(define (sentence)  (append (getNoun) (getVerb) )) 
+(sentence)
+;Every time you run it you should get randomized results depending on your list of words.
+
+;(sentence) -> ( kitty runs )
+;(sentence) -> ( kitty plays )
+;(sentence) -> ( toast steams )
+
+;Try testing your generator!
+
+;You can COPY/PASTE INTO LAB ENDNG HERE ###################
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;ON YOUR OWN FOR NOW:
+;If you finished up to this point, you can try to make better sentences
+;by replacing getNoun and getVerb with new functions. We can replace a
+;noun with a noun phrase, and replace a verb with a verb phrase. 
+;You can experiment on your own to do so. Try using adjectives and adverbs.
+
+;GOAL: Sentence Generation (Day 2)
+
+;READ ALL OF THE CONTENT. DO NOT SKIM.
+
+
+;A better sentece is in the format:
+
+; Noun Phrase + Verb Phrase
+
+;e.g.
+
+; The chair + runs.
+
+; The big kid + quickly ran.
+
+; The dog + solemnly spins.
+
+; The sad emo puppy + happily enthusiastically lollygags.
+
+;So lets make a better sentence!
+
+;You should have written the following already:
+
+(define (getNth L n)
+    (if (= n 0)
+        (car L)
+        (getNth (cdr L) (- n 1))))
+
+
+(define (getOne L)
+    (getNth L (random (length L))))
+
+
+;basic word lists:
+
+    (define nouns '(Spaghetti Gremlin Uranium elephant tile winner loser hedgehog))
+(define propernouns '(Gcat Mom Pikachu Ironman MJ I Ziggy Mr.T ))
+    (define verbs '(eyes sprints flops flips slips considers evaluates rehearses grabs fights))
+
+;get-word commands (that put the word into a list for ease of appending)
+
+    (define (getNoun) (list (getOne nouns)))
+  (define (getPropernoun) (list (getOne propernouns)))
+    (define (getVerb) (list (getOne verbs)))
+
+;########### Other word lists###########:
+
+;1. You need to write a list of adverbs and adjectives, as well as the 
+;getAdverb and getAdjective. Optionally you can write properNouns and proNouns as well! 
+
+(define adjectives '(winged wonderful flipping derpish Kool-with-a-k Koala-like erinacious lovely epic))
+(define adverbs '(flabbergastedly sweetly gracefully floppily quickly easily slyly shyly nicely))
+
+(define (getAdjective) (list (getOne adjectives)))
+(define (getAdverb) (list (getOne adverbs)))
+
+;make a short list of 3 of each for now
+
+
+;2. This NEXT idea is going to help you write the much better sentence generator:
+
+;IN ORDER TO RANDOMLY CHOOSE BETWEEN SEVERAL OPTIONS:
+
+;This is how you can have a cond statement randomly chooses
+
+;(you have to replace the ... with what you want it to do.)
+
+
+;between 2 options:
+
+;(cond
+;  ((= 0 (random 2)) (getNoun))
+;  (else (getPronoun))
+;)
+
+;Or 4 options:
+;(cond
+;  ((= 0 (random 4)) ... ))
+;  ((= 0 (random 3)) ... ))
+;  ((= 0 (random 2)) ... ))
+;  (else ... )
+;)
+
+
+;3. Now using this idea we want to make a nounPhrase generator, and a verb phrase generator. The results of which can be appended to create a sentence. 
+
+;sample output:
+
+;(nounPhrase) -> ( the lazy dog )
+
+;(nounPhrase) -> ( the quick brown fox )
+
+
+;sample output:
+
+;(verbPhrase) -> ( jumps )
+
+;(verbPhrase) -> ( uselessly dances )
+
+
+
+;For the noun phrase:
+
+;Sometimes you want to have a noun by itself. (with ‘the’ in front of it)
+
+;Sometimes you want ‘the’ + adjective + noun.
+
+
+;So maybe your options would be:
+
+;(append ‘(the) (getNoun))
+
+;(append ‘(the) (getAdjective) (getNoun))
+
+
+;After you write your nounPhrase generator, try verbPhrase:
+
+;For the verb phrase two basic ideas would be:
+
+; verb
+
+; adverb + verb
+
+
+;4. After you get a nounPhrase and verbPhrase generator, add more options to make more complex sentences. Your goal should be to write the most awesome sentence generator you can. 
+
+
+;Here are some ideas:
+
+;pronouns
+
+;propernouns
+
+;transitive vs. intransitive verbs. 
+
+;make your getAdjective function return 1 or more adjectives.
+
+;make your getAdverb function return 1 or more adverbs.
+
+;pluralization (requires you to have separate noun and verb lists for plural.)
+
+(define (epicsentence) (append 
+                        (cond
+                          ((= 0 (random 3)) (append '(the) (getNoun)))
+                          ((= 0 (random 2)) (append '(the) (getAdjective) (getNoun)))
+                          ((= 0 (random 1)) (getPropernoun))
+                          (else (append (getAdjective (getPropernoun)))))
+                        (cond
+                          ((= 0 (random 2)) (getVerb))
+                          (else (append (getAdverb) (getVerb))))))
+  (epicsentence)
+                        

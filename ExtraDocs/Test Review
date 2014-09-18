@@ -1,0 +1,49 @@
+;Duplicate
+(define (duplicate x) 
+  (if (null? x) 
+      '() 
+      (append (cons (car x) (list (car x))) 
+            (duplicate (cdr x)))))
+
+(duplicate '(1 3 9 2 4))
+
+;Add all Positive
+(define (aap x) 
+  (cond 
+    ((null? x) 0) 
+    ((list? (car x)) 
+     (+ (aap (car x)) 
+        (aap (cdr x)))) 
+    ((< (car x) 0) 
+     (+(* -1 (car x))
+       (aap (cdr x))))
+    (else (+ (car x) 
+             (aap (cdr x))))))
+
+(aap '(-2 2))
+(aap '(-3 (-4 -5) 3))
+
+;Count null lists
+(define (cnl x) 
+  (cond 
+    ((null? x) 0) 
+    ((null? (car x)) 
+     (+ 1 (cnl (cdr x))))
+    ((list? (car x)) 
+     (+ (cnl (car x)) 
+        (cnl (cdr x))))
+    (else (cnl (cdr x)))))
+
+(cnl '(9 3 2 0 () () (2 89 () 9 8) 9 2 () ))
+
+;Delete less than
+(define (dlt L x) 
+  (cond 
+    ((null? L) '())
+    ((list? (car L)) 
+     (cons (dlt (car L) x)
+           (dlt (cdr L) x)))
+    ((< (car L) x) (dlt (cdr L) x))
+    (else (cons (car L) (dlt (cdr L) x)))))
+
+(dlt '(9 3 4 2 9 (89 382 90 3 4 1) 2 4 2 (2 3)) 4)

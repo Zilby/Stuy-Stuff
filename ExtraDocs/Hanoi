@@ -1,0 +1,10 @@
+(define (hanoi n start temp end)
+  (cond ((> n 0) 
+         (begin 
+           (display start) 
+           (display "to")
+           (display temp)
+           (hanoi (- n 1) start end temp)
+           (hanoi (- n 1) temp end start)))))
+(hanoi 2 'a 'b 'c)
+(hanoi 3 'a 'b 'c)

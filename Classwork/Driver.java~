@@ -1,0 +1,11 @@
+public class Driver {
+
+  public static void main(String[] args) {
+     Greeter g = new Greeter();
+     Greeter g2 = new Greeter();
+
+     g.greet();
+     g.greet();
+     g2.greet();
+  }
+}
