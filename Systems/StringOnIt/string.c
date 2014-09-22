@@ -1,0 +1,60 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int slen(char t[]);
+char *scpy(char *dest, char *source);
+char *scat(char *s1, char *s2);
+int scmp(char *s1, char *s2);
+
+int main(){
+  char s[10]="hello";
+  printf("%s: %d\n",s,slen(s)); //testing for slen
+  char cpy[15]="aba";
+  printf("After scpy, %s became: ",cpy);
+  scpy(cpy,s);
+  printf("%s\n",cpy);
+  char cat[15]="AddOn";
+  printf("After scat, %s became: ",cpy);
+  scat(cpy,cat);
+  printf("%s\n",cpy);
+  char s2[18]="hello";
+  char s3[5]="po";
+  printf("scmp %s and %s: %d\n" ,s,s2,scmp(s,s2));
+  return 0;
+}
+
+int slen(char t[]){
+    int x=0;
+    while(t[x]){
+      x++;
+    }
+    return x;
+}
+
+char *scpy(char *dest, char *source){
+  int x=0;
+  while(source[x]){
+    dest[x]=source[x];
+    x++;
+  }
+  return dest;
+}
+
+char *scat(char *s1, char *s2){
+  int x=0;
+  int y=slen(s2);
+  while(s2[x]){
+    s1[y+x]=s2[x];
+    x++;
+  }
+  return s1;
+}
+
+int scmp(char *s1, char *s2){
+  int x=0;
+  while(s1[x]==s2[x]&&s1[x]){
+    x++;
+  }
+  return s1[x]-s2[x];
+}
