@@ -1,0 +1,16 @@
+frames 100
+basename dope
+push
+move 400 250 50
+torus 0 0 0 50 100
+push
+move -400 -250 0
+
+move 0 750 0 up
+move 480 0 0 over
+move 0 -650 0 down
+
+sphere 0 0 -100 40
+vary up 0 45 0 1
+vary over 0 99 0 1
+vary down 46 99 0 1

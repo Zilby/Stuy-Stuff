@@ -1,0 +1,41 @@
+push
+rotate y 30
+move 250 200 0
+box -75 150 0 150 300 40
+push
+move -75 -150 0
+box 0 0 0 45 200 40
+move 110 0 0
+box 0 0 0 45 200 40 
+pop
+push
+move 0 201 0
+rotate y 90
+sphere 0 0 0 50
+rotate y -30
+rotate z 60
+torus 35 50 -15 5 20 
+pop
+push 
+move 100 150 0
+rotate x 65
+box 0 0 0 40 200 40
+move 20 -220 -20
+sphere 0 0 0 20
+rotate z 75 
+torus -30 0 0 4 10
+rotate z 45
+torus -30 0 0 4 10
+pop
+push
+move -100 150 0
+rotate x -65
+box 0 0 0 40 200 40
+move 20 -220 -20
+sphere 0 0 0 20
+rotate z 75 
+torus -30 0 0 4 10
+rotate z 45
+torus -30 0 0 4 10
+display
+

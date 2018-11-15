@@ -1,0 +1,19 @@
+frames 360
+basename Planets
+light 0 100 -500 255 255 251
+push
+move 250 250 0
+rotate x 15
+rotate z 45
+rotate y 360 spinner
+planet 0 0 0 100 0 15 31 0 .8 1.6 .2 .2 .2 7 15 7 .4 .8 .4 .06 .06 .06 100
+move 190 0 0
+push
+rotate x 20
+rotate y 1800 spinner
+planet 0 0 0 50 23 23 23 1.2 1.2 1.2 0 0 0 15 15 15 .8 .8 .8 0 0 0 40
+move 70 0 0
+push
+rotate y 3600 spinner
+planet 0 0 0 15 31 11 11 1.6 .6 .6 0 0 0 23 11 7 1.2 .6 .4 0 0 0
+vary spinner 0 359 0 1

@@ -1,0 +1,13 @@
+push
+move 500 500 0
+rotate x 15
+rotate y 15
+box 0 0 0 300 300 300
+sphere 0 0 0 300
+torus 0 0 0 500 350
+push
+move 500 500 0
+box 0 0 0 300 300 300
+pop
+pop
+save somefile.png

@@ -1,0 +1,9 @@
+push
+move 250 250 0
+scale 1.5 1.5 1.5
+rotate x -105
+rotate y 0
+rotate z 45
+mesh monkey.stl
+
+display

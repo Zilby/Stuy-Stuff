@@ -1,0 +1,15 @@
+push
+box 0 0 0 200 300 400
+push
+move 0 100 0
+sphere 0 0 0 50
+sphere 0 50 0 25
+sphere 0 0 50 25
+push
+move 0 -100 100
+pop
+pop
+rotate x 60
+box 0 0 0 100 100 100
+save testing
+display

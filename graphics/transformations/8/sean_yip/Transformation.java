@@ -1,0 +1,1 @@
+enum Transformation {ROTATE_X, ROTATE_Y, ROTATE_Z, SCALE, TRANSLATE, APPLY, RESET}

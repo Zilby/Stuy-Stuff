@@ -1,0 +1,13 @@
+frames 100
+basename final
+push
+move 250 250 0
+scale 1 3 1 Sphere1
+rotate x 360 Sphere1
+sphere 0 0 0 90
+vary Sphere1 0 49 0 1
+push
+rotate y 360 Sphere2
+sphere 0  0 0 45
+vary Sphere2 0 49 0 1
+push

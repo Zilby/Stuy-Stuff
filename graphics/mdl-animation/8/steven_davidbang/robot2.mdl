@@ -1,0 +1,77 @@
+frames 50
+basename robot
+push
+rotate y 30
+move 20 0 0 hips1
+move -40 0 0 hips2
+move 20 0 0 hips3
+move 0 50 0 jump
+move 0 -50 0 jump2
+move 250 200 0
+box 0 150 0 100 150 40
+push
+rotate y 90
+move -10 175 -60
+sphere 0 0 0 35
+pop
+push
+move 100 150 0
+rotate z 135
+rotate z 20 swing1
+rotate z -40 swing2
+rotate z 20 swing3
+box 0 0 0 20 100 40
+pop
+push
+move -3 150 0
+rotate z -135
+rotate z 20 swing1
+rotate z -40 swing2
+rotate z 20 swing3
+box 0 0 0 -20 100 40
+pop
+push
+move 80 0 0
+rotate z 20
+rotate z 20 swing1
+rotate z -40 swing2
+rotate z 20 swing3
+box 0 0 0 20 125 40
+pop
+push
+move 20 0 0
+rotate z -20
+rotate z -20 swing1
+rotate z 40 swing2
+rotate z -20 swing3
+box 0 0 0 -20 125 40
+pop
+pop
+push
+move 250 200 0
+move 20 75 0
+move 0 30 0 jump1
+move 0 -30 0 jump2
+rotate y 360 spin
+rotate z -20 swivel1
+rotate z 40 swivel2
+rotate z -20 swivel3
+move 50 0 0 shake1
+move -95 0 0 shake2
+move 50 0 0 shake3
+torus 0 0 0 10 100
+vary spin 0 49 0 1
+vary shake1 0 16 0 1
+vary shake2 16 32 0 1
+vary shake3 32 49 0 1
+vary swivel1 0 16 0 1
+vary swivel2 16 32 0 1
+vary swivel3 32 49 0 1
+vary hips1 0 16 0 1
+vary hips2 16 32 0 1
+vary hips3 32 49 0 1
+vary swing1 0 16 0 1
+vary swing2 16 32 0 1
+vary swing3 32 49 0 1
+vary jump 0 24 0 1
+vary jump2 25 49 0 1

@@ -1,0 +1,79 @@
+model DOOR {
+		loadfile FRAME.OBJ
+		genprim sphere 
+	}
+	mesh DOOR_LEFT {
+		loadfile BLAH1.OBJ
+		loadfile BLAH2.OBJ
+	}
+	mesh DOOR_RIGHT {
+		loadfile BLAH3.OBJ
+	}
+	mesh DOOR_LEFT.WHIRLIGIG {
+		loadfile WHIRL.OBJ
+	}
+	mesh BLANK {
+	}
+	var DOOR_SLIDE_LEFT
+	var DOOR_SWING_LEFT
+	var DOOR_SLIDE_RIGHT
+	var DOOR_SWING_RIGHT
+	var WHIRLIGIG_SPIN
+		anim CLEAR {
+			set DOOR_SLIDE_LEFT 0
+			set DOOR_SWING_LEFT 0
+			set DOOR_SLIDE_RIGHT 0
+			set DOOR_SWING_RIGHT 0
+		}
+		anim CLOSED {
+			duration 0	
+			animate WHIRL_SPIN
+			animate CLEAR
+		}
+		anim WHIRL_SPIN {
+			duration 1
+			vary WHIRLIGIG_SPIN { 0, 0; 1,360}
+			next loop
+		}
+	anim OPEN_SLIDE {
+		animate WHIRL_SPIN
+		animate CLEAR
+		set DOOR_SLIDE_LEFT -0.5
+		set DOOR_SLIDE_RIGHT 0.5
+	}
+	anim OPEN_ROTATE {
+		animate WHIRL_SPIN
+		animate CLEAR
+		set DOOR_SWING_LEFT 90
+		set DOOR_SWING_RIGHT 90
+	}
+	anim OPENING_SLIDE {
+		animate WHIRL_SPIN
+		animate CLEAR
+		vary DOOR_SLIDE_LEFT { 0,0 ; 0.5, -0.5; 1, -0.5; }
+		vary DOOR_SLIDE_RIGHT { 0,0 ; 0.5, 0.5; 1, 0.5; }
+		next OPEN_SLIDE
+	}
+	anim OPENING_ROTATE {
+		animate WHIRL_SPIN
+		animate_CLEAR
+		vary DOOR_SWING_LEFT { 0,0 ; 0, 60; 1, 90; }
+		vary DOOR_SWING_RIGHT { 0,0 ; 0, -60; 1, -90; }
+		next OPEN_ROTATE
+	}
+	transform FRAME {}
+	transform DOOR_LEFT {
+		r 0 DOOR_SWING_LEFT 0
+		t DOOR_SLIDE_LEFT 0 0
+	}
+	transform DOOR_RIGHT {
+		t -0.5 0 0
+		r 0 DOOR_SWING_RIGHT 0
+		t 0.5 0 0
+		t DOOR_SLIDE_RIGHT 0 0
+	}
+	transform WHIRLIGIG {
+		r 0 0 WHIRLIGIG_SPIN
+		t 0.5, 0.5, 0
+	}
+}

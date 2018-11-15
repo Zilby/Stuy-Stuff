@@ -1,0 +1,31 @@
+push
+sphere 250 500 0 15 
+sphere 110 45 0 15
+sphere 390 45 0 15
+sphere 15 330 0 15 
+sphere 485 330 0 15
+push 
+sphere 367 415 0 10
+sphere 135 415 0 10
+sphere 438 180 0 10
+sphere 63 180 0 10
+sphere 250 50 0 10
+push
+line 250 500 0 485 330 0
+line 250 500 0 15 330 0 
+line 485 330 0 390 45 0
+line 110 45 0 15 330 0 
+line 110 45 0 390 45 0 
+push
+line 250 450 0 435 330 0
+line 250 450 0 65 330 0 
+line 435 330 0 380 95 0
+line 120 95 0 65 330 0 
+line 120 95 0 380 95 0 
+push
+move 0 250 0
+rotate x 90
+torus 250 250 0 2 10
+torus 250 250 0 2 200
+torus 250 250 0 2 250
+save fthlab.png

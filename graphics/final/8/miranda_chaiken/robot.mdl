@@ -1,0 +1,18 @@
+push
+move 250 200 0
+rotate y 75
+rotate x 20
+//constants tardis .5 .2 .3 .5 .2 .3 .5 .2 .3
+//light 255 0 0 10 10 -10
+//ambient 0 0 255
+box tardis -100 150 40 200 300 80
+//push
+//rotate y 90
+//move 0 201 0
+//sphere tardis 0 0 0 100
+//pop
+//push
+//move 100 150 0
+//rotate x 65
+//box 0 0 30 40 200 60
+display

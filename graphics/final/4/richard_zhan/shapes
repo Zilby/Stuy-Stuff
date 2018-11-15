@@ -1,0 +1,10 @@
+push
+move 300 300 0
+rotate x 11
+rotate y 4
+rotate z 9
+scale 2.5 2.5 2.5
+torus 0 0 0 25 100
+push
+sphere 0 0 0 50
+display

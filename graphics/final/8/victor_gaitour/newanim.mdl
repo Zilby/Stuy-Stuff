@@ -1,0 +1,9 @@
+frames 100
+basename robot
+push
+move 500 500 0 go
+rotate z 360 spin
+rotate y 360 spin
+sphere 0 0 0 100 50 50
+vary go 0 100 0 1
+vary spin 0 100 0 1

@@ -1,0 +1,50 @@
+frames 100
+basename tardis
+push
+
+move 250 220 0
+rotate z 1440 rotation
+rotate x 90
+torus 0 0 -30 30 50
+
+torus 0 0 10 30 150
+
+torus 0 0 10 30 250
+
+pop
+push
+move 250 220 0
+rotate z 1440 rotation2
+rotate x 90
+torus 0 0 -50 30 30
+torus 0 0 -10 30 100
+torus 0 0 30 30 200
+torus 0 0 70 30 300
+pop
+push
+move 250 220 0
+rotate z 720 rotation
+scale 1 1 1 scaler
+push
+rotate y 30
+rotate x 30
+move 200 0 0
+scale .6 .6 .6
+box -100 200 0 200 400 200
+box -100 200 0 100 400 -10
+box 0 200 0 100 400 -10
+push
+move 0 210 -20
+box  -80 10 0 160 20 160
+push
+move 0 20 0
+sphere 0 0 -80 10
+pop
+pop
+push
+move 0 -210 20
+box  -120 -10 0 240 -20 240
+vary rotation 0 100 1 0
+vary rotation2 0 100 0 1
+vary scaler 0 49 0 1
+vary scaler 50 99 1 0

@@ -1,0 +1,26 @@
+push
+move 50 0 0
+rotate y 80
+box 100 250 0 100 200 50
+sphere 120 290 -30 40
+box 50 250 0 50 150 20
+box 100 50 0 100 150 20 
+box 270 50 0 100 150 20 
+push
+rotate x -20
+box 150 400 25 50 150 20
+push
+rotate x 20
+move -50 0 100
+sphere 120 290 -380 40
+box 400 250 -300 100 200 50
+box 400 50 -300 100 150 20
+box 570 50 -300 100 150 20
+push
+rotate x -20
+box 400 500 -260 50 150 20
+push
+rotate x 40
+box 500 280 -320 50 150 20
+display
+save final.png

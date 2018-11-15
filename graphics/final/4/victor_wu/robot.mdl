@@ -1,0 +1,12 @@
+frames 1
+push
+move 310 200 0
+scale 3 3 0
+sphere 0 0 0 40
+push
+rotate x 60
+rotate y 23
+push
+save xp.png
+display
+

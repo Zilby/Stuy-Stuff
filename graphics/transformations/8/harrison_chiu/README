@@ -1,0 +1,3 @@
+Hi Mr. DW!  I apologize in advance for any technical difficulties you have in trying to run Racket-related things.
+
+My Makefile will invoke "racket parser.rkt", which conjures a prompt at which you can enter the name of a script.  If you don't have the Racket command-line tool installed, you can also open parser.rkt in DrRacket and run it, obtaining a similar prompt.  I hope everything runs without problems!

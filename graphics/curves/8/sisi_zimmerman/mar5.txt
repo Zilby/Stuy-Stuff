@@ -1,0 +1,97 @@
+NOTES:
+
+parametric equations
+
+x = f(t)
+y = g(t)
+
+x = x0 + (dx)t
+y = y0 + (dy)t
+(from t=0 - t=1)
+
+circle
+-find pts, and connect them
+-how many pts do you need?  ~20 - 100
+
+other stuff(shapes?)
+
+
+for( t=0 ; t<=1.0; step++)
+     x=function(t) (ex. rcos(2*pi*t) + centerx)
+     y=			rsin(2*pi*t) + centery
+     z=
+
+     add edge
+     //set x,y,z back to 0
+
+
+	why does the circle have a hole?
+	w/ step .1 no hole, w/ .05 hole	
+	shouldn't happen, but floating pt shenannigins
+	(will cause more issues later)
+	can use ints instead
+	can change 1 to 1.000001
+
+	piecewise function
+	x/yparam func change but step loop thing stays relatively same
+	
+math-y stuff:
+
+	spline
+		curves
+		cubic
+	
+	hermite curves
+		givens: (note pts have x and y)
+			end pts: p0,p1 
+			slopes at end pts(makes them easy to connect) (r0,r1)
+		parametric eqs:
+			h1(t) = 2t^3 - 3t^2 + 1
+			h2(t) = -2t^3 + 3t^2
+			h3(t) = t^3 - 2t^2 + t
+			h4(t) = t^3 - t^2
+
+			pt = h1(t)*p0 + h2(t)*p1 + h3(t)*r0 + h4(t)+r1
+
+			^^these equations are alot of math
+			try to make it the form:
+			at^3 + bt^2 + ct + d
+
+			...some matrix stuf...
+			...multiplying stuff gets you the hermite eqs..
+
+			(2p0-2p1+r0+r1)t^3 + (-3p0+3p1-2r0-r1)t^2 + r0t + po
+
+
+	bezier curves
+		givens:
+			end pts: p0, p3
+			points of influence: p1, p2
+				(can be more/less but we're doing cubics)
+		
+		linear bezier curve
+			Lt = (1-t)p0 + tp1
+
+		quadratic bezier curve
+			Qt = (1-t)((1-t)p0 + tp1) + t((1-t)p1 + tp2)
+			   = (1-t)^2p0 + 2t(1-t)p1 + t^2p2
+		
+		cubic bezier curve
+			(plug in the quadratic as pts in linear)
+			Ct = (1-t)^3p0 + 3t(1-t)^2p1 + 3t^2(t-1)p2 + t^3p3
+		
+		^^this is alot of math again
+		..math-y matrix stuff again
+		
+		()t^3 + ()t^2 + ()t + 
+
+
+
+
+
+
+
+
+
+	
+

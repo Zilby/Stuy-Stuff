@@ -1,0 +1,5 @@
+So, when you right-click, the routine to draw directly into the z-axis is
+triggered. This means having a constant x and y along the line, but a z going
+from 0 to sqrt((deltaX)^2 + (deltaY)^2). In other words, the length of the z
+line is the (pythagorean) distance from the initial x,y to the final x,y.
+:D

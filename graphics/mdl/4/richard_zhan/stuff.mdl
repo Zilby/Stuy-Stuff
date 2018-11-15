@@ -1,0 +1,24 @@
+push
+rotate x 25
+rotate y 34
+rotate z 12
+move 100 200 0
+box 0 0 0 100 150 20
+box 100 0 0 100 150 20
+box 200 0 0 100 150 20
+box 300 0 0 100 150 20
+box 400 0 0 100 150 20
+box 500 0 0 100 150 20
+push
+move 300 100 0
+sphere 0 0 0 70
+push
+move 0 100 0
+torus 0 0 0 40 200
+push
+rotate x 180
+rotate y 180
+rotate z 180
+line 0 -300 0 0 200 0
+display
+save relativepolygons.png

@@ -1,0 +1,31 @@
+CHANGELOG
+=========
+
+04/20/15
+[graphics.cpp] Backface culling algorithm implemented.
+
+04/12/15
+[mesh.cpp] Sphere wireframe finalized.
+[matrix.cpp] Undo change to insert(), +z is now out of the page. (This change causes errors with hermite and bezier curves.)
+[mesh.cpp] Torus wireframe finalized.
+
+04/09/15
+[mesh.cpp] Prism wireframe finalized.
+[matrix.cpp] Update insert() so that +z is into the page.
+
+04/08/15
+[graphics.cpp] Fixed meshlist such that the list contains a list of the mesh pointers, rather than the actual memory of the meshes themselves.
+[graphics.cpp] Engine automatically applies each mesh's stored transformation matrix when exporting to raster.
+[graphics.cpp] Engine supports inserting polygons (triangles).
+
+03/26/15
+[mesh.cpp] Finalized the code for creating a point sphere. (double for loop using theta and phi, plug into parametric equations (x, y, z) for a sphere.
+[mesh.cpp] Finalized the code for creating a point torus. (double for loop using theta and phi, plug into parametric equations (x, y, z) for a torus.
+[mesh.cpp] Finalized the code for creating a point cube.
+
+03/25/15 and before: 
+[mesh.cpp]
+[graphics.cpp]
+[loader.cpp]
+[matrix.cpp]
+[raster.cpp]

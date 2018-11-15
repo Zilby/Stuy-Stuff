@@ -1,0 +1,7 @@
+frames 1
+basename test
+push
+rotate y 30
+rotate x 30
+box 100 100 100 50 50 50
+display

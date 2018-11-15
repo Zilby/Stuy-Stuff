@@ -1,0 +1,7 @@
+push
+move 300 300 0
+rotate x 8
+rotate y 10
+rotate z 14
+box -150 -150 0 150 150 100
+display

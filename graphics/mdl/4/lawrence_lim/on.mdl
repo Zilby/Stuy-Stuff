@@ -1,0 +1,310 @@
+//world
+push
+move -20 0 0
+rotate y 10
+rotate x 40
+
+//big guy
+push 
+move 400 200 0
+
+//torso
+push
+box 0 0 0 80 120 40
+
+//head
+push
+move 40 -30 20
+sphere 0 0 0 30
+pop
+
+//left arm
+push
+move 80 0 20
+rotate x -70
+box 0 0 0 30 80 25
+
+push
+move 0 80 0
+rotate x -30
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//right arm
+push
+move -30 20 0
+rotate x 40
+box 0 0 0 30 80 25
+
+push 
+move 0 80 0
+rotate x -20
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//pelvis
+push
+move 0 120 0
+rotate x -20
+box 0 0 0 80 40 40  
+
+//left leg
+push 
+move 45 40 0 
+rotate x -80
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 50
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//right leg
+push
+move 0 40 0
+rotate x 20
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 20
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//pop pelvis, torso, bigguy
+pop
+pop
+pop
+
+
+//small guy
+push
+move 225 225 0
+scale 0.75 0.75 0.75
+
+//torso
+push
+box 0 0 0 80 120 40
+
+//head
+push
+move 40 -30 20
+sphere 0 0 0 30
+pop
+
+//left arm
+push
+move 80 0 20
+rotate x -70
+box 0 0 0 30 80 25
+
+push
+move 0 80 0
+rotate x -30
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//right arm
+push
+move -30 20 0
+rotate x 40
+box 0 0 0 30 80 25
+
+push 
+move 0 80 0
+rotate x -20
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//pelvis
+push
+move 0 120 0
+rotate x -20
+box 0 0 0 80 40 40  
+
+//left leg
+push 
+move 45 40 0 
+rotate x -80
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 50
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//right leg
+push
+move 0 40 0
+rotate x 20
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 20
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//pop pelvis, torso, smallguy
+pop
+pop
+pop
+
+
+
+//smaller guy
+push
+move 100 250 0
+scale 0.50 0.50 0.50
+
+//torso
+push
+box 0 0 0 80 120 40
+
+//head
+push
+move 40 -30 20
+sphere 0 0 0 30
+pop
+
+//left arm
+push
+move 80 0 20
+rotate x -70
+box 0 0 0 30 80 25
+
+push
+move 0 80 0
+rotate x -30
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//right arm
+push
+move -30 20 0
+rotate x 40
+box 0 0 0 30 80 25
+
+push 
+move 0 80 0
+rotate x -20
+box 0 0 0 30 80 25
+
+pop
+pop
+
+//pelvis
+push
+move 0 120 0
+rotate x -20
+box 0 0 0 80 40 40  
+
+//left leg
+push 
+move 45 40 0 
+rotate x -80
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 50
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//right leg
+push
+move 0 40 0
+rotate x 20
+box 0 0 0 35 90 30 
+
+push
+move 0 90 0
+rotate x 20
+box 0 0 0 35 100 30 
+
+pop
+pop
+
+//pop pelvis, torso, smallerguy
+pop
+pop
+pop
+
+
+//pop world
+pop
+
+
+//torus test
+push
+rotate x 30
+
+//top
+push
+move 75 80 0
+rotate x 90
+torus 0 0 0 10 40
+
+push
+move 60 0 0
+rotate x 90
+torus 0 0 0 10 40
+
+push
+move 60 0 0
+rotate x -90
+torus 0 0 0 10 40
+
+pop
+pop
+pop
+
+//bottom
+push
+move 75 500 0
+rotate x 90
+torus 0 0 0 10 40
+
+push
+move 60 0 0
+rotate x 90
+torus 0 0 0 10 40
+
+push
+move 60 0 0
+rotate x -90
+torus 0 0 0 10 40
+
+pop
+pop
+pop
+
+//pop torustest
+pop
+
+
+//pbbbt
+display
+save on.ppm

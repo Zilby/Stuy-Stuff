@@ -1,0 +1,5 @@
+(require 'asdf)
+(push (uiop:getcwd) asdf:*central-registry*)
+(ql:quickload 'rizna)
+(in-package rizna)
+(dw-execute "test")

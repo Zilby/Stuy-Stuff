@@ -1,0 +1,32 @@
+push
+move 250 250 0
+rotate x 90
+torus 0 0 0 1 255
+torus 0 0 0 1 245
+pop
+move 250 250 0
+sphere 0 0 0 35
+line 0 250 0 -238 77 0
+line -238 77 0 -147 -202 0
+line -147 -202 0 147 -202 0
+line 147 -202 0 238 77 0
+line 238 77 0 0 250 0
+
+line -147 -202 0 121 -7 0
+sphere 121 -7 0 10
+line 147 -202 0 49 107 0
+sphere 49 107 0 10
+line 238 77 0 -93 77 0
+sphere -93 77 0 10
+line 0 250 0 -113 -59 0
+sphere -113 -59 0 10
+line -238 77 0 30 -118 0
+sphere 30 -118 0 10
+sphere -147 -202 0 25
+sphere 147 -202 0 25
+sphere 238 77 0 25
+sphere 0 250 0 25
+sphere -238 77 0 25
+pop
+
+display

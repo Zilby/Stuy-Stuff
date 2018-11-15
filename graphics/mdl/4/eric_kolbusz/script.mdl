@@ -1,0 +1,35 @@
+push
+rotate x 45
+move 250 200 0
+box 0 150 0 100 150 40
+push
+move 0 -150 0
+rotate y 20
+box 0 150 10 10 100 20
+pop
+push
+move 90 -150 0
+rotate z -20
+box -50 250 10 10 100 20
+pop
+push
+move 50 -10 0
+sphere 0 20 0 30
+pop
+push
+move 0 150 0
+rotate x 15
+rotate y 15
+rotate z 35
+box 20 120 10 10 100 20
+pop
+push
+move 90 150 0
+rotate x -30
+rotate y -25
+rotate z -55
+box -20 100 10 10 100 20
+pop
+pop
+display
+save pic.ppm
